@@ -1,0 +1,5 @@
+{
+    "port": "/dev/tty.BLTH",
+    "board": "arduino:avr:uno",
+    "programmer": "avrispmkii"
+}

@@ -30,5 +30,5 @@ Desk-Emoji is a truly open-source AI desktop robot featuring an emoji screen, a 
 
 ## Author
 
-* Mark Yang
-* Email: mark.yang@ewen.ltd
+* Book
+* Email: lrblsy@163.com

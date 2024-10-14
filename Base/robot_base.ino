@@ -41,6 +41,29 @@ int right_eye_y = 32;
 int right_eye_height = ref_eye_height;
 int right_eye_width = ref_eye_width;
 
+//WiFi 
+char ssid[] = "booooook";  
+char pass[] = "12345678";  
+void setup() {
+  Serial.begin(9600);
+  while (!Serial) { ; }  
+  //
+  if (WiFi.status() == WL_NO_MODULE) {
+    Serial.println("WiFi 模块无法检测到");
+    while (true);
+  }
+  //
+  Serial.print("尝试连接到网络: ");
+  Serial.println(ssid);
+  while (WiFi.begin(ssid, pass) != WL_CONNECTED) {
+    delay(10000);
+    Serial.print(".");
+  }
+  Serial.println("连接成功!");
+  Serial.print("IP 地址: ");
+  Serial.println(WiFi.localIP());
+}
+
 // Functions
 void draw_eyes(bool update = true);
 void saccade(int direction_x, int direction_y);
